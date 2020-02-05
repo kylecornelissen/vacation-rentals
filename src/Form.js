@@ -7,7 +7,8 @@ class LogInForm extends Component {
     this.state = {
       name: '',
       email: '',
-      purpose: 'Business'
+      purpose: 'Business',
+      inputIncomplete: false
     }
   }
 
@@ -16,9 +17,19 @@ class LogInForm extends Component {
     this.setState({ [e.target.name]: e.target.value})
   }
 
+  verifyInputs = () => {
+  	console.log('verify')
+    if (!this.state.name || !this.state.email) {
+    	this.setState( { inputIncomplete: true } )
+    } else {
+    	this.setState( { inputIncomplete: false } )
+    }
+  } 
+
   render() {
   	return (
   	<form>
+  	  {this.state.inputIncomplete && <h2> Error! </h2>}
       <label for="name">Name:</label>
   	  <input
   	    type="text"
@@ -41,7 +52,7 @@ class LogInForm extends Component {
         <option value="Vacation">Vacation</option>
         <option value="Other">Other</option>
       </select>
-      <button type="button">Enter</button>
+      <button type="button" onClick={() => this.verifyInputs()}>Enter</button>
   	</form>
   	)
   }
