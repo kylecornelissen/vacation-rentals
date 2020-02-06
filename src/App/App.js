@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from "react-router-dom";
-import LogInForm from './Form.js';
-import AreasContainer from './AreasContainer.js';
+import LogInForm from '../Form/Form.js';
+import AreasContainer from '../AreasContainer/AreasContainer.js';
 
 export default class App extends Component {
   constructor() {
