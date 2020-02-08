@@ -15,11 +15,6 @@ class AreasContainer extends Component {
   	}
   }
 
-  addUserInfo = () => {
-    // console.log()
-    // this.setState({this.state.name, purpose})
-  }
-
   componentDidMount() {
   	fetch('http://localhost:3001/api/v1/areas')
   	  .then(response => response.json())

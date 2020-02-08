@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-class LogInForm extends Component {
+class Form extends Component {
   constructor() {
     super();
     this.state = {
