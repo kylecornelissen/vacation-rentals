@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-class LogInForm extends Component {
+class Form extends Component {
   constructor() {
     super();
     this.state = {
@@ -20,10 +20,17 @@ class LogInForm extends Component {
     return this.state.name && this.state.email
   }
 
+
   handleError = () => {
     if (!this.verifyInputs()) {
       this.setState( { error: 'Please Fill Out All Inputs' } )
     }
+    this.submitUser()
+  }
+
+  submitUser = props => {
+
+    this.props.addUser( {name: this.state.name, purpose: this.state.purpose} )
   }
 
   render() {
@@ -52,8 +59,7 @@ class LogInForm extends Component {
           <option value="Vacation">Vacation</option>
           <option value="Other">Other</option>
         </select>
-        <Link to={() => this.verifyInputs() ? '/areas' : '/'
-        }><span onClick={() => this.handleError()}>Enter</span></Link>
+        <Link to={() => this.verifyInputs() ? '/areas' : '/'}><span onClick={() => this.handleError()}>Enter</span></Link>
     	</form>
   	)
   }

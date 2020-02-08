@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import { fetchAreaDetails } from '../helpers.js';
 import './AreasContainer.css';
 
+import Navigation from '../Navigation/Navigation.js'
+
 class AreasContainer extends Component {
   constructor() {
   	super();
   	this.state = {
+      name: '',
+      purpose: '',
   		areas: [],
   		error: ''
   	}

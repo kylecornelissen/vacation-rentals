@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   height: 100vh;
-  background: lightgrey;
+  background: #c5c1c0;
   padding: 20% 0;
 }
 
@@ -12,7 +12,7 @@
 .box {
   width: 650px;
   height: 150px;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   background: red;
 }
 
@@ -52,7 +52,7 @@ button {
 article {
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 
 h2 {
