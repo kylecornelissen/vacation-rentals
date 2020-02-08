@@ -6,6 +6,8 @@ import LogInForm from './Form.js';
 import AreasContainer from './AreasContainer.js';
 import Home from './Home.js';
 
+import Navigation from '../Navigation/Navigation.js'
+
 export default class App extends Component {
   constructor() {
     super();
@@ -28,7 +30,7 @@ export default class App extends Component {
                 <LogInForm changePath={this.changePath}/>
             </Route>
             <Route exact path="/areas">
-              <AreasContainer/>
+              <Navigation/>
             </Route>
           </Switch>
         </div>

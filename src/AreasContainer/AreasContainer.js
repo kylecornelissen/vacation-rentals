@@ -3,10 +3,14 @@ import { fetchAreaDetails } from '../helpers.js';
 import './AreasContainer.css';
 import { Link } from "react-router-dom";
 
+import Navigation from '../Navigation/Navigation.js'
+
 class AreasContainer extends Component {
   constructor() {
   	super();
   	this.state = {
+      name: '',
+      purpose: '',
   		areas: [],
   		error: ''
   	}
