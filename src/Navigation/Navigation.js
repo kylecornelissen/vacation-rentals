@@ -22,11 +22,11 @@ class Navigation extends Component {
             </h1>
             <NavLink to='/' className='nav_button'> SIGN OUT </NavLink>
           </article>
-         <AreasContainer addUser={this.addUser}/>
+
         </div>
         )
-    } 
-  		
+    }
+
 }
 
 export default Navigation;

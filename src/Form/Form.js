@@ -65,4 +65,4 @@ class Form extends Component {
   }
 }
 
-export default LogInForm;
+export default Form;
