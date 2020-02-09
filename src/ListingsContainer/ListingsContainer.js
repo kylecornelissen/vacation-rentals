@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ListingsContainer.css';
+import { Link } from 'react-router-dom';
 
 class ListingsContainer extends Component {
   constructor() {
@@ -22,6 +23,8 @@ class ListingsContainer extends Component {
       return (
         <article key={listing.listing_id}>
           <h1>{listing.name}</h1>
+          <img src={process.env.PUBLIC_URL + `/images/${listing.listing_id}_a.jpg`} />
+          <Link to={`/areas/${listing.area_id}/listings/${listing.listing_id}`}><button type="submit">More Details</button></Link>
         </article>
       )
     });
