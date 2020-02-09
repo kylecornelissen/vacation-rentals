@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import LogInForm from '../Form/Form.js';
-
+import AreasContainer from '../AreasContainer/AreasContainer.js';
+import ListingsContainer from '../ListingsContainer/ListingsContainer.js';
 import Navigation from '../Navigation/Navigation.js'
-
 
 export default class App extends Component {
   constructor() {
@@ -21,8 +21,11 @@ export default class App extends Component {
       <Router>
         <div className="App">
           <Switch>
+            <Route path="/areas/:id/listings" component={ListingsContainer} />
             <Route exact path='/' render={() => <LogInForm addUser={this.addUser} />} />
-            <Route exact path='/areas' render={() => <Navigation name={this.state.name} purpose={this.state.purpose}/>} />
+            <Route exact path='/areas' render={() => <Navigation name={this.state.name} purpose={this.state.purpose}/>
+                                                     <AreasContainer />
+                                              } />
           </Switch>
         </div>
       </Router>
