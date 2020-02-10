@@ -25,7 +25,6 @@ class AreasContainer extends Component {
   render() {
     const { areas } = this.state;
     return areas.map(location => {
-
       return (
       	<article key={location.id}>
           <h1>{location.shortName}</h1>
