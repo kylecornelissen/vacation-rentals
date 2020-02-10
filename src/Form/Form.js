@@ -36,7 +36,7 @@ class Form extends Component {
 
   render() {
   	return (
-    	<form>
+    	<form autoComplete="off">
         {this.state.error && <h2>{this.state.error}</h2>}
         <div className="form_container">
           <article className="form_input-container">
