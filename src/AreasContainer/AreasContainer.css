@@ -1,7 +1,40 @@
-h1 {
-	/*color: #0a1612;*/
+* {
+	/*border: 1px dotted red;*/
 }
 
-* {
-	/*border: 1px solid green;*/
+.areas_listing-container {
+	width: 400px;
+	height: 450px;
+	background: #E0E5EC;
+	box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px
+  rgba(255,255,255, 0.5);
+	margin: 20px;
+}
+
+.area_name-box {
+  font-size: 22px;
+	height: 43px;
+	background: #E0E5EC;
+	box-shadow: 9px 9px 16px rgb(163,177,198,0.3), -9px -9px 16px
+  rgba(255,255,255, 0.5);
+  text-align: center;
+}
+
+.area_name-text {
+	margin: 0;
+}
+
+.img_here {
+	height: 150px;
+	background: #f7ce3e;
+}
+
+.button_listing {
+	background: #0a1612;
+  width: 206px;
+  height: 68px;
+  float: right;
+  font-size: 28px;
+  color: #ffffff;
+  border: none;
 }
