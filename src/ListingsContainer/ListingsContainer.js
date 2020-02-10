@@ -23,8 +23,13 @@ class ListingsContainer extends Component {
       return (
         <article key={listing.listing_id}>
           <h1>{listing.name}</h1>
-          <img src={process.env.PUBLIC_URL + `/images/${listing.listing_id}_a.jpg`} />
-          <Link to={`/areas/${listing.area_id}/listings/${listing.listing_id}`}><button type="submit">More Details</button></Link>
+          <img src={process.env.PUBLIC_URL + `/images/${listing.listing_id}_a.jpg`} alt={`${listing.name}`} />
+          <Link to={{
+            pathname: `/areas/${listing.area_id}/listings/${listing.listing_id}`,
+            state: {listing}
+          }}>
+            <button type="submit">More Details</button>
+          </Link>
         </article>
       )
     });
