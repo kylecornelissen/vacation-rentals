@@ -27,15 +27,18 @@ class AreasContainer extends Component {
     return areas.map(location => {
 
       return (
-      	<article key={location.id}>
-          <h1>{location.shortName}</h1>
+      	<article className="areas_listing-container" key={location.id}>
+          <div className="area_name-box">
+            <h1 className="area_name-text">{location.shortName}</h1>
+          </div>
+          <div className="img_here"></div>
           <h2>{location.name}</h2>
           <p>{location.about}</p>
           <Link to={{
             pathname: `/areas/${location.id}/listings`,
             state: {listings: location.listings}
           }}>
-            <button>See Listings</button>
+            <button className="button_listing" >See Listings</button>
           </Link>
         </article>
       	)

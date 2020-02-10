@@ -1,33 +1,13 @@
+* {
+  /*border: 1px solid red;*/
+}
+
 .App {
-  text-align: center;
   height: 100vh;
-  background: #c5c1c0;
-  padding: 20% 0;
-}
-
-/** {
-  border: 1px solid red;
-}*/
-
-.box {
-  width: 650px;
-  height: 150px;
-  /*border: 1px solid green;*/
-  background: red;
-}
-
-form {
-  max-width: 60%;
-  height: 130px;
-  background: #f7ce3e;
-  margin: 0 auto;
-}
-
-input {
-  display: inline-block;
-  float: left;
-  width: 100px;
-  height: 28px;
+  background:#E0E5EC;
+  background-image: url(./cover.jpg);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 select {
@@ -38,27 +18,19 @@ select {
 label {
   display: inline-block;
   float: left;
-}
-
-button {
-  background: #1a2930;
-  width: 130px;
-  height: 130px;
-  float: right;
-  font-size: 28px;
-  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 article {
   display: flex;
   flex-direction: column;
-  /*border: 1px solid blue;*/
 }
 
 h2 {
   color: red;
   font-size: 28px;
 }
+
 
 
 

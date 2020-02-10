@@ -3,7 +3,6 @@
 }
 
 .nav_container {
-	border: 1px solid green;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -14,18 +13,19 @@
 	width: 125px;
 	height: 70px;
 	font-size: 18px;
-	background: #f7ce3e;
-	color: #1a2930;
+	background: #7E8A9A;
+	color: #ffffff;
+	text-align: center;
 }
 
 h1 {
-	color: #ffffff;
+	color: #7E8A9A;
 }
 
 .nav_signoff-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	background: #1a2930;
+	background: #E0E5EC;
 	color: #f7ce3e;
 }
