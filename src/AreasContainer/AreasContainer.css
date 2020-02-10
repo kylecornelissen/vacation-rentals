@@ -3,8 +3,8 @@
 }
 
 .areas_listing-container {
-	width: 400px;
-	height: 450px;
+	width: 300px;
+	height: 350px;
 	background: #E0E5EC;
 	box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px
   rgba(255,255,255, 0.5);
@@ -32,7 +32,7 @@
 .button_listing {
 	background: #0a1612;
   width: 206px;
-  height: 68px;
+  height: 43px;
   float: right;
   font-size: 28px;
   color: #ffffff;
