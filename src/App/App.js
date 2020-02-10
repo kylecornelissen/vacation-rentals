@@ -21,11 +21,11 @@ export default class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Navigation name={this.state.name} purpose={this.state.purpose}/>
+        <Route path="/:path" render={() => <Navigation name={this.state.name} purpose={this.state.purpose} />} />
           <Switch>
-            <Route exact path="/areas/:area_id/listings" component={ListingsContainer} />
             <Route exact path='/' render={() => <LogInForm addUser={this.addUser} />} />
-            <Route exact path='/areas' render={() => <AreasContainer addUser={this.addUser}/>} />
+            <Route exact path='/areas' render={() => <AreasContainer addUser={this.addUser} />} />
+            <Route exact path="/areas/:area_id/listings" component={ListingsContainer} />
             <Route exact path='/areas/:area_id/listings/:listing_id' component={Listing} />
           </Switch>
         </div>
