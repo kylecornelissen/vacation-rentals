@@ -68,7 +68,9 @@ class Form extends Component {
               <option value="Other">Other</option>
             </select>
           </article>
-          <Link to={() => this.verifyInputs() ? '/areas' : '/'}><button className="main_button" onClick={() => this.handleError()}>Enter</button></Link>
+          <Link to={() => this.verifyInputs() ? '/areas' : '/'}>
+            <button className="main_button" onClick={() => this.handleError()}>Enter</button>
+          </Link>
           </div>
           {this.state.error && <div className="error_box"><h2 className="error_text">{this.state.error}</h2></div>}
       	</form>

@@ -1,3 +1,15 @@
+.fav-btn {
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background: gray;
+  border: none;
+  height: 7.5%;
+  width: 15%;
+}
+
 .listing_box {
 	background: #f7ce3e;
 	width: 95%;
@@ -13,11 +25,6 @@
   height: 200px;
   margin: 0 15px;
 }
-/*
-.listing_img-container {
-	display: flex;
-	flex-direction: row;
-}*/
 
 .name_box {
 	width: 100%;
@@ -57,10 +64,3 @@ li {
 	color: #7E8A9A;
   font-size: 16px;
 }
-
-/*.listing_flex-container {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-}*/
-
