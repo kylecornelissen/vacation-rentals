@@ -18,7 +18,8 @@ class Navigation extends Component {
             <h1>
               {this.props.purpose}
             </h1>
-            <NavLink to='/favorites' className="fav-btn"> FAVS </NavLink>
+            <NavLink to='/areas' className="fav-btn"> AREAS </NavLink>
+            <NavLink to='/favorites' className="fav-btn"> FAVS{`(${this.props.favorites.length})`} </NavLink>
             <NavLink to='/' className="nav_button"> SIGN OUT </NavLink>
           </article>
 
