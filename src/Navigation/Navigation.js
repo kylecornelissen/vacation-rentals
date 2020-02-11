@@ -7,25 +7,19 @@ class Navigation extends Component {
     super();
     this.state = {}
   }
-
-  	render() {
-      return(
-        <div className="nav_container">
-          <article className="nav_signoff-container">
-            <h1>
-              {this.props.name}
-            </h1>
-            <h1>
-              {this.props.purpose}
-            </h1>
-            <NavLink to='/areas' className="fav-btn"> AREAS </NavLink>
-            <NavLink to='/favorites' className="fav-btn"> FAVS{`(${this.props.favorites.length})`} </NavLink>
-            <NavLink to='/' className="nav_button"> SIGN OUT </NavLink>
-          </article>
-
-        </div>
-        )
-    }
+	render() {
+    return(
+      <div className="nav_container">
+        <ul className="nav_signoff-container">
+          <li className="nav-btn">{this.props.name}</li>
+          <li className="nav-btn">{this.props.purpose}</li>
+          <NavLink to='/areas'><li className="nav-btn">AREAS</li></NavLink>
+          <NavLink to='/favorites'><li className="nav-btn">FAVS{`(${this.props.favorites.length})`}</li></NavLink>
+          <NavLink to='/' className="sign-off-btn"><li className="sign-off-btn">SIGN OUT</li></NavLink>
+        </ul>
+      </div>
+    )
+  }
 
 }
 
