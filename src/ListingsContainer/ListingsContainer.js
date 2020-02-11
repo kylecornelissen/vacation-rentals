@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ListingsContainer.css';
 import { Link } from 'react-router-dom';
+import { getListing } from '../apiCalls.js';
 
 class ListingsContainer extends Component {
   constructor() {
@@ -12,8 +13,7 @@ class ListingsContainer extends Component {
   componentDidMount() {
     const listings = this.props.location.state.listings;
     listings.forEach(listing => {
-      fetch('http://localhost:3001' + listing)
-        .then(res => res.json())
+      getListing(listing)
         .then(data => this.setState({listings: [...this.state.listings, data]}))
         .catch(error => console.log(error))
     });
