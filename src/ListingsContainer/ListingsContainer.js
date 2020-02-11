@@ -28,9 +28,9 @@ class ListingsContainer extends Component {
     return this.state.listings.map(listing => {
       let favorited = favorites.includes(listing.listing_id);
       return (
-        <article key={listing.listing_id}>
-          <h1>{listing.name}</h1>
-          <img src={process.env.PUBLIC_URL + `/images/${listing.listing_id}_a.jpg`} alt={`${listing.name}`} />
+        <article className="listing_container" key={listing.listing_id}>
+          <h1 className="listing_name-text">{listing.name}</h1>
+          <img className="area_img" src={process.env.PUBLIC_URL + `/images/${listing.listing_id}_a.jpg`} alt={`${listing.name}`} />
           <button type="submit" onClick={() => this.toggleFavorite(listing.listing_id, favorited)}>
             <img src={process.env.PUBLIC_URL + (favorited ? "/star-active.svg" : "/star.svg")}
                  alt="favorite button"
@@ -41,7 +41,8 @@ class ListingsContainer extends Component {
             pathname: `/areas/${listing.area_id}/listings/${listing.listing_id}`,
             state: {listing}
           }}>
-            <button type="submit">More Details</button>
+            <button className="list_button" type="submit">More Details</button>
+            <button className="list_button" >Favorite</button>
           </Link>
         </article>
       )

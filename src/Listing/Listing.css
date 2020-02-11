@@ -9,3 +9,58 @@ button {
   height: 7.5%;
   width: 15%;
 }
+
+.listing_box {
+	background: #f7ce3e;
+	width: 95%;
+	max-height: 510px;
+	margin: 1.5%;
+	box-shadow: 9px 9px 16px rgb(0,0,0,0.2), -9px -9px 16px
+  rgba(0,0,0, 0.2);
+  text-align: center;
+}
+
+.listing_img {
+	width: 30%;
+  height: 200px;
+  margin: 0 15px;
+}
+
+.name_box {
+	width: 100%;
+	float: right;
+	background: black;
+}
+.name_h1 {
+	font-size: 32px;
+	margin: 5px;
+}
+
+.listing_feature_list {
+	/*width: 300px;*/
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.feature_list-container {
+	display: inline-block;
+	/*width: 40%;*/
+}
+
+.listing_feature_list {
+  list-style-type: none;
+	font-size: 18px;
+	color: #7E8A9A;
+	font-size: 16px;
+	text-align: center;
+}
+
+.feature_text {
+	color: #7E8A9A;
+  font-size: 18px;
+}
+
+li {
+	color: #7E8A9A;
+  font-size: 16px;
+}
