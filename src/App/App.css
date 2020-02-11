@@ -1,5 +1,7 @@
 * {
   /*border: 1px solid red;*/
+  margin: 0;
+  padding: 0;
 }
 
 .App {
@@ -22,14 +24,15 @@ label {
 }
 
 article {
-  display: flex;
-  flex-direction: column;
+  /*display: flex;*/
+  /*flex-direction: column;*/
 }
 
 h2 {
   color: #7E8A9A;
-  font-size: 28px;
+  font-size: 36px;
   text-align: center;
+  margin: 10px;
 }
 
 
