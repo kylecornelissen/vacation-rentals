@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { getListing } from '../apiCalls.js';
 
 class Favorites extends Component {
   constructor() {
@@ -14,8 +15,7 @@ class Favorites extends Component {
     const {favorites} = this.props;
     favorites.forEach(listing => {
       listing = `/api/v1/listings/${listing}`
-      fetch('http://localhost:3001' + listing)
-        .then(res => res.json())
+      getListing(listing)
         .then(data => this.setState({favoriteListings: [...this.state.favoriteListings, data]}))
         .catch(error => console.log(error))
     });
