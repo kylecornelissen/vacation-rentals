@@ -24,7 +24,8 @@ class Listing extends Component {
       zip: listingData.address.zip,
       numBath: listingData.details.baths,
       numBed: listingData.details.beds,
-      costPerNight: listingData.details.cost_per_night
+      costPerNight: listingData.details.cost_per_night,
+      favorited: this.props.favorites.includes(listingData.listing_id)
     }
   }
   getFeatures = listingData => {
@@ -35,6 +36,9 @@ class Listing extends Component {
   toggleFavorite = listingId => {
     const {addFavorite} = this.props;
     addFavorite(listingId);
+    const listing = {...this.state.listing};
+    listing.favorited = !this.state.listing.favorited;
+    this.setState({listing});
   }
   render() {
     const { listing, features } = this.state;
@@ -54,7 +58,12 @@ class Listing extends Component {
             <li key={feat}>{feat}</li>
           )
         })}</ul>
-        <button onClick={() => this.toggleFavorite(listing.id)}>Favorite</button>
+        <button type="submit" onClick={() => this.toggleFavorite(listing.id)}>
+          <img src={process.env.PUBLIC_URL + (listing.favorited ? "/star-active.svg" : "/star.svg")}
+               alt="favorite button"
+               className="fav-btn"
+          />
+        </button>
       </article>
     )
   }
