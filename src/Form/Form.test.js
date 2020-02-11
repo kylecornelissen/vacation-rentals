@@ -1,30 +1,27 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Form from './Form';
 import { shallow } from 'enzyme';
 
-describe('App', () => {
+describe('Form', () => {
   let wrapper, instance;
 
   beforeEach(() => {
-    wrapper = shallow(<App />)
+    wrapper = shallow(<Form />)
     instance = wrapper.instance()
 
   })
 
-  it('should check the data default state', () => {
-    expect(wrapper.state().name).toEqual('Name');
-    expect(wrapper.state().purpose).toEqual('Purpose');
-    expect(wrapper.state().favorites).toEqual([]);
-  });
+  // it('should check the data default state', () => {
+  //   console.log(wrapper)
+  //   expect(wrapper.state().purpose).toEqual('Business');
+  // });
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(<Form />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
 });
-
-

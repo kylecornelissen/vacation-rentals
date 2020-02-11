@@ -39,22 +39,26 @@ class Listing extends Component {
   render() {
     const { listing, features } = this.state;
     return (
-      <article key={listing.id}>
+      <article className="listing_box" key={listing.id}>
+      <article className="name_box">
+        <h2 className="name_h2">{listing.streetAddress}, {listing.zip}</h2>
+      </article>
         <h1>{listing.name}</h1>
-        <h2>{listing.streetAddress}, {listing.zip}</h2>
-
         <h2>${listing.costPerNight}/night</h2>
         <p>Beds: {listing.numBed}</p>
         <p>Bath: {listing.numBath}</p>
-        <img src={process.env.PUBLIC_URL + `/images/${listing.id}_a.jpg`} alt={`${listing.name} 1`} />
-        <img src={process.env.PUBLIC_URL + `/images/${listing.id}_b.jpg`} alt={`${listing.name} 2`} />
-        <img src={process.env.PUBLIC_URL + `/images/${listing.id}_c.jpg`} alt={`${listing.name} 3`} />
+        <div className="listing_img-container">
+          <img className="listing_img" src={process.env.PUBLIC_URL + `/images/${listing.id}_a.jpg`} alt={`${listing.name} 1`} />
+          <img className="listing_img" src={process.env.PUBLIC_URL + `/images/${listing.id}_b.jpg`} alt={`${listing.name} 2`} />
+          <img className="main_listing-img listing_img" src={process.env.PUBLIC_URL + `/images/${listing.id}_c.jpg`} alt={`${listing.name} 3`} />
+        </div>
         <ul>Features: {features.map(feat => {
           return (
             <li key={feat}>{feat}</li>
           )
         })}</ul>
         <button onClick={() => this.toggleFavorite(listing.id)}>Favorite</button>
+        <article></article>
       </article>
     )
   }

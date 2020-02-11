@@ -1,12 +1,28 @@
 .listing_container {
-	border: 1px solid red;
-	background: #0a1612;
+	background: #f7ce3e;
 	width: 350px;
 	height: 300px;
-	margin: 5%;
+	margin: 1.5%;
+	box-shadow: 9px 9px 16px rgb(0,0,0,0.2), -9px -9px 16px
+  rgba(0,0,0, 0.2);
+  text-align: center;
 }
 
 .area_img {
-	width: 150px;
+	width: 100%;
 	height: 200px;
+}
+
+.listing_name-text {
+	color: #0a1612;
+}
+
+.list_button {
+  width: 119px;
+  height: 26px;
+  background: #0a1612;
+  margin: 3px;
+  color: #c5c1c0;
+  border: none;
+  border-radius: 5px;
 }

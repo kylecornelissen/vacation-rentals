@@ -1,0 +1,28 @@
+.listing_box {
+	background: #f7ce3e;
+	/*height: 700px;*/
+	width: 700px;
+	max-height: 500px;
+	margin: 1.5%;
+	box-shadow: 9px 9px 16px rgb(0,0,0,0.2), -9px -9px 16px
+  rgba(0,0,0, 0.2);
+  text-align: center;
+}
+
+.listing_img {
+	width: 150px;
+	height: 150px;
+}
+
+.listing_img-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.name_box {
+	border: 1px solid red;
+	width: 150px;
+	height: 700px;
+	float: right;
+	background: black;
+}
