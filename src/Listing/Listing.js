@@ -5,7 +5,7 @@ class Listing extends Component {
   constructor() {
     super();
     this.state = {
-      listing: [],
+      listing: {},
       features: []
     };
   }
@@ -15,7 +15,7 @@ class Listing extends Component {
                     features: this.getFeatures(listingData)
                  });
   }
-  createListing(listingData) {
+  createListing = listingData => {
     return {
       id: listingData.listing_id,
       area_id: listingData.area_id,
@@ -27,15 +27,19 @@ class Listing extends Component {
       costPerNight: listingData.details.cost_per_night
     }
   }
-  getFeatures(listingData) {
+  getFeatures = listingData => {
     return listingData.details.features.map(feat => {
       return feat
     });
   }
+  toggleFavorite = listingId => {
+    const {addFavorite} = this.props;
+    addFavorite(listingId);
+  }
   render() {
     const { listing, features } = this.state;
     return (
-      <article>
+      <article key={listing.id}>
         <h1>{listing.name}</h1>
         <h2>{listing.streetAddress}, {listing.zip}</h2>
 
@@ -50,7 +54,7 @@ class Listing extends Component {
             <li key={feat}>{feat}</li>
           )
         })}</ul>
-        <button>Favorite</button>
+        <button onClick={() => this.toggleFavorite(listing.id)}>Favorite</button>
       </article>
     )
   }

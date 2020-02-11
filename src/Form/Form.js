@@ -30,7 +30,6 @@ class Form extends Component {
   }
 
   submitUser = props => {
-
     this.props.addUser( {name: this.state.name, purpose: this.state.purpose} )
   }
 

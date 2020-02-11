@@ -13,7 +13,6 @@ class AreasContainer extends Component {
   		error: ''
   	}
   }
-
   componentDidMount() {
   	fetch('http://localhost:3001/api/v1/areas')
   	  .then(response => response.json())
@@ -21,7 +20,6 @@ class AreasContainer extends Component {
   	  .then(areaData => this.setState({areas: areaData}))
     	.catch(error => this.setState({error}))
   }
-
   render() {
     const { areas } = this.state;
     return areas.map(location => {
