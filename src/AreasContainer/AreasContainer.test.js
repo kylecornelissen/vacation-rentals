@@ -13,9 +13,9 @@ describe('AreasContainer', () => {
 
   })
 
-  // it('should check the data default state', () => {
-  //   expect(wrapper.state().purpose).toEqual('Business');
-  // });
+  it('should check the data default state', () => {
+    expect(instance.state.areas).toEqual([])
+  });
 
   it('renders without crashing', () => {
     const div = document.createElement('div');

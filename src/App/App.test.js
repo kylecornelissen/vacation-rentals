@@ -19,6 +19,14 @@ describe('App', () => {
     expect(wrapper.state().favorites).toEqual([]);
   });
 
+  it('should add a new user to state', () => {
+    expect(wrapper.state().name).toEqual('Name');
+    expect(wrapper.state().purpose).toEqual('Purpose');
+    wrapper.instance().addUser({name: 'Mike', purpose: 'Vaca'})
+    expect(wrapper.state().name).toEqual('Mike');
+    expect(wrapper.state().purpose).toEqual('Vaca');
+  })
+
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<App />, div);

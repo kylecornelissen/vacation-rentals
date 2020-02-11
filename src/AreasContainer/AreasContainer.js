@@ -7,10 +7,7 @@ class AreasContainer extends Component {
   constructor() {
   	super();
   	this.state = {
-      name: '',
-      purpose: '',
-  		areas: [],
-  		error: ''
+  		areas: []
   	}
   }
   componentDidMount() {
