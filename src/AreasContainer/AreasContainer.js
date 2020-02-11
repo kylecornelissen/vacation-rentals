@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { fetchAreaDetails } from '../helpers.js';
 import './AreasContainer.css';
 import { Link } from "react-router-dom";
+import { getAreas } from '../apiCalls.js'
 
 class AreasContainer extends Component {
   constructor() {
@@ -14,8 +15,7 @@ class AreasContainer extends Component {
   	}
   }
   componentDidMount() {
-  	fetch('http://localhost:3001/api/v1/areas')
-  	  .then(response => response.json())
+    getAreas()
   	  .then(data => fetchAreaDetails(data.areas))
   	  .then(areaData => this.setState({areas: areaData}))
     	.catch(error => this.setState({error}))
