@@ -1,0 +1,12 @@
+.listing_container {
+	border: 1px solid red;
+	background: #0a1612;
+	width: 350px;
+	height: 300px;
+	margin: 5%;
+}
+
+.area_img {
+	width: 150px;
+	height: 200px;
+}

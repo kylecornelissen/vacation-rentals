@@ -21,14 +21,15 @@ class ListingsContainer extends Component {
   render() {
     return this.state.listings.map(listing => {
       return (
-        <article key={listing.listing_id}>
+        <article className="listing_container" key={listing.listing_id}>
           <h1>{listing.name}</h1>
-          <img src={process.env.PUBLIC_URL + `/images/${listing.listing_id}_a.jpg`} alt={`${listing.name}`} />
+          <img className="area_img" src={process.env.PUBLIC_URL + `/images/${listing.listing_id}_a.jpg`} alt={`${listing.name}`} />
           <Link to={{
             pathname: `/areas/${listing.area_id}/listings/${listing.listing_id}`,
             state: {listing}
           }}>
             <button type="submit">More Details</button>
+            <button>Favorite</button>
           </Link>
         </article>
       )

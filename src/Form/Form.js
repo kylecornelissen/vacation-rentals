@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import './Form.css';
 
+
+
 class Form extends Component {
   constructor() {
     super();
@@ -36,7 +38,7 @@ class Form extends Component {
   render() {
   	return (
     	<form autoComplete="off">
-        {this.state.error && <h2>{this.state.error}</h2>}
+        
         <div className="form_container">
           <article className="form_input-container">
             <label for="name">Name:</label>
@@ -68,6 +70,7 @@ class Form extends Component {
           </article>
           <Link to={() => this.verifyInputs() ? '/areas' : '/'}><button className="main_button" onClick={() => this.handleError()}>Enter</button></Link>
           </div>
+          {this.state.error && <div className="error_box"><h2 className="error_text">{this.state.error}</h2></div>}
       	</form>
     	)
     }
