@@ -1,0 +1,11 @@
+.fav-btn {
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background: gray;
+  border: none;
+  height: 7.5%;
+  width: 15%;
+}
