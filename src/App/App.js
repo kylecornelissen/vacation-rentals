@@ -33,7 +33,7 @@ export default class App extends Component {
     return (
       <Router>
         <div className="App">
-        <Route path="/:path" render={() => <Navigation name={this.state.name} purpose={this.state.purpose} />} />
+        <Route path="/:path" render={() => <Navigation name={this.state.name} purpose={this.state.purpose} favorites={this.state.favorites}/>} />
           <Switch>
             <Route exact path='/' render={() => <Form addUser={this.addUser} />} />
             <Route exact path='/areas' render={() => <AreasContainer />} />
