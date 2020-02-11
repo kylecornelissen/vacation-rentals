@@ -16,16 +16,18 @@ export default class App extends Component {
       favorites: []
     }
   }
-
   addUser = user => {
     this.setState( {name: user.name, purpose: user.purpose} )
   }
-
   addFavorite = listingId => {
-    !this.state.favorites.includes(listingId) &&
-    this.setState( {favorites: [...this.state.favorites, listingId]} );
+    if (!this.state.favorites.includes(listingId)) {
+      this.setState( {favorites: [...this.state.favorites, listingId]} );
+    } else {
+      const favorites = [...this.state.favorites];
+      favorites.splice(favorites.indexOf(listingId) ,1);
+      this.setState( {favorites: favorites} );
+    }
   }
-
   render() {
     return (
       <Router>
@@ -34,8 +36,18 @@ export default class App extends Component {
           <Switch>
             <Route exact path='/' render={() => <Form addUser={this.addUser} />} />
             <Route exact path='/areas' render={() => <AreasContainer />} />
-            <Route exact path="/areas/:area_id/listings" render={({location}) => <ListingsContainer location={location} addFavorite={this.addFavorite} />} />
-            <Route exact path='/areas/:area_id/listings/:listing_id' render={({location}) => <Listing location={location} addFavorite={this.addFavorite} />} />
+            <Route exact path="/areas/:area_id/listings" render={
+              ({location}) => <ListingsContainer location={location}
+                                                 addFavorite={this.addFavorite}
+                                                 favorites={this.state.favorites}
+                              />
+            } />
+            <Route exact path='/areas/:area_id/listings/:listing_id' render={
+              ({location}) => <Listing location={location}
+                                       addFavorite={this.addFavorite}
+                                       favorites={this.state.favorites}
+                              />
+            } />
           </Switch>
         </div>
       </Router>
