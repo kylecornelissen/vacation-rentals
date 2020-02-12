@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## V.R.A.D. (Vacation Rentals Around Denver)
 
 Collaborators: [Kyle Cornelissen](https://github.com/kylecornelissen/) & [Jesse Maxim](https://github.com/Jessmaxim303)
