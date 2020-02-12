@@ -4,7 +4,7 @@ Collaborators: [Kyle Cornelissen](https://github.com/kylecornelissen/) & [Jesse 
 
 ### Setup
 
-1. Clone this api and `cd` into the directory
+1. Clone [this api](https://github.com/turingschool/VRAD-API) and `cd` into the directory
 1. Run `npm i` and `npm start` (The API should now be running on `localhost:3001`)
 1. Clone this repo and `cd` into the directory
 1. Run `npm i` and `npm start` (The app will now be running on `localhost:3000`)
